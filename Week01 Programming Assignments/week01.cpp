@@ -17,6 +17,7 @@ int main()
     string currentDate;
     int totalMeals;
     int todayCalories;
+    int averageCalories;
 
     // Greeting
     cout << "Welcome to Nutrition Tracker!" << endl;
@@ -36,6 +37,9 @@ int main()
     cout << "Enter your total calorie intake for today: ";
     cin >> todayCalories;
 
+    // Calculate average calories per meal
+    averageCalories = todayCalories / totalMeals;
+
     cout << endl;
 
     // Display nutrition summary
@@ -47,6 +51,7 @@ int main()
     cout << "Date: " << currentDate << endl;
     cout << "Meals Eaten Today: " << totalMeals << endl;
     cout << "Today's Calorie Intake: " << todayCalories << " calories" << endl;
+    cout << "Average Calories Per Meal: " << averageCalories << " calories" << endl;
 
     cout << endl;
     cout << "Thank you for using Nutrition Tracker!" << endl;
