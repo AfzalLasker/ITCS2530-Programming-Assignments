@@ -7,6 +7,8 @@
 
 #include <iostream>
 #include <string>
+#include <iomanip>
+#include <fstream>
 
 using namespace std;
 
@@ -14,47 +16,77 @@ int main()
 {
     // Declare variables
     string userName;
-    string currentDate;
     int totalMeals;
     int todayCalories;
-    int averageCalories;
+    double averageCalories;
+
 
     // Greeting
     cout << "Welcome to Nutrition Tracker!" << endl;
     cout << "This application helps keep track of your daily nutrition information." << endl;
     cout << endl;
 
+
     // Ask user information
     cout << "Enter your name: ";
-    cin >> userName;
+    getline(cin, userName);
 
-    cout << "Enter today's date (MM/DD/YYYY): ";
-    cin >> currentDate;
 
+    // Ask for meals eaten
     cout << "How many meals did you eat today? ";
     cin >> totalMeals;
+    // Input check for wrong data type
+    if (cin.fail())             // Check if user entered the wrong input type
+    {
+        cin.clear();            // Clear the error
+        cin.ignore(100, '\n');  // remove the invalid input from memory
+        cout << "Invalid input!" << endl << endl;
+    }
 
+
+    // Ask for calorie intake
     cout << "Enter your total calorie intake for today: ";
     cin >> todayCalories;
+    // Input check for wrong data type
+    if (cin.fail())             // Check if user entered the wrong input type
+    {
+        cin.clear();            // Clear the error
+        cin.ignore(100, '\n');  // remove the invalid input from memory
+        cout << "Invalid input!" << endl << endl;
+    }
+
 
     // Calculate average calories per meal
     averageCalories = todayCalories / totalMeals;
-
     cout << endl;
+ 
 
     // Display nutrition summary
     cout << "------ Nutrition Summary ------" << endl;
-
     cout << endl;
 
-    cout << "User Name: " << userName << endl;
-    cout << "Date: " << currentDate << endl;
-    cout << "Meals Eaten Today: " << totalMeals << endl;
-    cout << "Today's Calorie Intake: " << todayCalories << " calories" << endl;
-    cout << "Average Calories Per Meal: " << averageCalories << " calories" << endl;
-
+    cout << left << setw(30) << "User Name: " << right << userName << endl;
+    cout << left << setw(30) << "Meals Eaten Today: " << right  << totalMeals << endl;
+    cout << left << setw(30) << "Today's Calorie Intake: " << right  << todayCalories << endl;
+    cout << left << setw(30) << "Average Calories Per Meal: " << right << fixed << setprecision(2) << averageCalories << endl;
     cout << endl;
-    cout << "Thank you for using Nutrition Tracker!" << endl;
+
+    cout << "Thank you for using Nutrition Tracker!" << endl << endl;
+
+    
+    // Save nutrition summary to file
+    ofstream report("report.txt");
+
+    report << "------ Nutrition Summary ------" << endl;
+    report << left << setw(30) << "User Name: " << right << setw(15) << userName << endl;
+    report << left << setw(30) << "Meals Eaten Today: " << right << setw(15) << totalMeals << endl;
+    report << left << setw(30) << "Today's Calorie Intake: " << right << setw(15) << todayCalories << " calories" << endl;
+    report << left << setw(30) << "Average Calories Per Meal: " << right << setw(15) << fixed << setprecision(2) << averageCalories << " calories" << endl;
+    report.close();
+
+    // Notify user that the report has been saved
+    cout << "Nutrition summary saved to report.txt" << endl << endl;
+
 
     return 0;
 }
