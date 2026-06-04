@@ -65,10 +65,10 @@ int main()
     cout << "------ Nutrition Summary ------" << endl;
     cout << endl;
 
-    cout << left << setw(30) << "User Name: " << right << userName << endl;
-    cout << left << setw(30) << "Meals Eaten Today: " << right  << totalMeals << endl;
-    cout << left << setw(30) << "Today's Calorie Intake: " << right  << todayCalories << endl;
-    cout << left << setw(30) << "Average Calories Per Meal: " << right << fixed << setprecision(2) << averageCalories << endl;
+    cout << left << setw(30) << "User Name: " << userName << endl;
+    cout << left << setw(30) << "Meals Eaten Today: " << totalMeals << endl;
+    cout << left << setw(30) << "Today's Calorie Intake: " << todayCalories << endl;
+    cout << left << setw(30) << "Average Calories Per Meal: " << fixed << setprecision(2) << averageCalories << endl;
     cout << endl;
 
     cout << "Thank you for using Nutrition Tracker!" << endl << endl;
@@ -78,10 +78,10 @@ int main()
     ofstream report("report.txt");
 
     report << "------ Nutrition Summary ------" << endl;
-    report << left << setw(30) << "User Name: " << right << setw(15) << userName << endl;
-    report << left << setw(30) << "Meals Eaten Today: " << right << setw(15) << totalMeals << endl;
-    report << left << setw(30) << "Today's Calorie Intake: " << right << setw(15) << todayCalories << " calories" << endl;
-    report << left << setw(30) << "Average Calories Per Meal: " << right << setw(15) << fixed << setprecision(2) << averageCalories << " calories" << endl;
+    report << left << setw(30) << "User Name: " << userName << endl;
+    report << left << setw(30) << "Meals Eaten Today: " << totalMeals << endl;
+    report << left << setw(30) << "Today's Calorie Intake: " << todayCalories << " calories" << endl;
+    report << left << setw(30) << "Average Calories Per Meal: " << fixed << setprecision(2) << averageCalories << " calories" << endl;
     report.close();
 
     // Notify user that the report has been saved
