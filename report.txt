@@ -4,10 +4,10 @@ User Name:                    Afzal Lasker
 Daily Meal Goal:              3
 Daily Calorie Goal:           500
 
-Meals Eaten Today:            3
+Meals Eaten Today:            2
 Today's Calorie Intake:       700 calories
-Average Calories Per Meal:    233.33 calories
+Average Calories Per Meal:    350.00 calories
 
 ------ Nutrition Assessment ------
 You are over your calorie goal for the day.
-You have met your meal goal for the day.
+You are under your meal goal for the day.

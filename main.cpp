@@ -4,7 +4,7 @@
 // This program collects daily nutrition information from the user
 // including name, date, meals eaten, and calorie intake.
 // The program then displays a formatted nutrition summary as output.
-
+// The program assesses whether the user is under, over, or meeting their meal and calorie goals based on the information provided.
 
 
 #include <iostream>
