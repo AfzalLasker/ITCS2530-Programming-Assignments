@@ -407,13 +407,16 @@ MigrationBackup/
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
 
+
+# ==========================================
+# Custom Mac & VS Code Rules for ITCS 2530
+# ==========================================
+
 # VS Code files for those working on multiple tools
 .vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
-!.vscode/*.code-snippets
+
+# Block Mac system tracking junk
+.DS_Store
 
 # Local History for Visual Studio Code
 .history/
