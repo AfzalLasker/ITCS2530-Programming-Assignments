@@ -39,6 +39,8 @@ int main()
     const double MIN_valid_Calories = 1;    // Minimum valid calorie value
     const int MIN_valid_Meals = 1;          // Minimum valid meal value
 
+    string textFile_1 = "report.txt";     // Text file name
+
 
 
     // Greeting
@@ -135,8 +137,8 @@ int main()
     //while loop
     while (cin.fail())             // Check if user entered the wrong input type
     {
-        cin.clear();            // Clear the error
-        cin.ignore(100, '\n');  // remove the invalid input from memory
+        cin.clear();               // Clear the error
+        cin.ignore(100, '\n');     // remove the invalid input from memory
         cout << "Invalid input!" << endl << endl;
 
         // Prompt the user again until valid input is provided
@@ -155,7 +157,7 @@ int main()
         cout << "*   Enter the calories consumed for meal " << i << ":   ";
         cin >> caloriePerMeals;
         //while loop
-        while (cin.fail())             // Check if user entered the wrong input type
+        while (cin.fail())          // Check if user entered the wrong input type
         {
             cin.clear();            // Clear the error
             cin.ignore(100, '\n');  // remove the invalid input from memory
@@ -318,7 +320,7 @@ int main()
 
     
     // Save nutrition summary to file
-    ofstream report("report.txt");
+    ofstream report(textFile_1);
 
     report << "==================================================" << endl;
     report << "               Nutrition Summary                  " << endl;
