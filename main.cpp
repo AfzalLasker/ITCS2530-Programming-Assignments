@@ -60,7 +60,6 @@ int main()
     cout << endl;
 
 
-
     
     cout << "------------------------------" << endl;
     cout << "Let's set some nutration goal!" << endl;
