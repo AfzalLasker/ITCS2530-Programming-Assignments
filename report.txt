@@ -1,15 +1,15 @@
 ==================================================
                Nutrition Summary                  
 ==================================================
-User Name:                                   fdafg
+User Name:                            Afzal Lasker
 
-Daily Meal Goal:                                 1
-Daily Calorie Goal:                              2
+Daily Meal Goal:                                22
+Daily Calorie Goal:                              3
 
 Meals Eaten Today:                               2
-Today's Calorie Intake:                          3
-Average Calories Per Meal:                    1.50
+Today's Calorie Intake:                         79
+Average Calories Per Meal:                   39.50
 
 -------------- Nutrition Assessment --------------
 #  You are over your calorie goal for the day.
-#  You are over your meal goal for the day.
+#  You are under your meal goal for the day.

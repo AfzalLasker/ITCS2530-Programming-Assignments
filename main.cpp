@@ -1,7 +1,7 @@
 // Nutrition Tracker Application
 // Afzal Lasker
 
-// Week 4 Programming Assignment
+// Week 5 Programming Assignment
 
 // This program collects daily nutrition information from the user,
 // including meal goals, meals eaten, and calorie intake.
@@ -25,13 +25,13 @@ int main()
     string userName;                // Store the user's name
 
     int dailyMealGoal;              // Store the user's daily meal goal
-    double dailyCalorieGoal = 0;    // Store the user's daily calorie goal
+    double dailyCalorieGoal;        // Store the user's daily calorie goal
 
     int totalMeals = 0;             // Store the total meals eaten today
     double caloriePerMeals;         // Store calories consumed per meal
     double todayCalories_totalSum = 0;       // Store the total calories consumed today
 
-    double averageCalories = 0;     // Store the average calories per meal
+    double averageCalories;         // Store the average calories per meal
 
     string setGoalMessage;          // Store the goal setting status message
     string calorieMessage;          // Store the calorie assessment message
