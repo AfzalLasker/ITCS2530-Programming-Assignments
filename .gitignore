@@ -418,6 +418,10 @@ FodyWeavers.xsd
 # Block Mac system tracking junk
 .DS_Store
 
+ITCS2530-Programming-Assignments
+main
+*.dSYM/
+
 # Local History for Visual Studio Code
 .history/
 
