@@ -2,7 +2,6 @@
 #include <string>
 #include <iomanip>
 #include <fstream>
-#include
 
 using namespace std;
 
@@ -162,10 +161,13 @@ int dailyMeals()
 double calorieIntake(int totalMeals)
 {
 
-    // Veriables
-    double caloriePerMeals;
-    double todayCalories_totalSum;
-    int MIN_valid_Meals = 1;
+   
+  
+    
+        // Variables
+        double caloriePerMeals = 0;
+        double todayCalories_totalSum = 0;
+        int MIN_valid_Meals = 1;
 
     // Collect calorie intake for each meal
     //for loop
